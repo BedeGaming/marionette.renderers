@@ -1,6 +1,5 @@
 {
-  "name": "marionette.renderers",
-  "private": false,
+  "name": "@bedegaming/marionette.renderers",
   "version": "0.4.0",
   "description": "Custom renderers for MarionetteJS",
   "main": "index.js",
@@ -12,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blikblum/marionette.renderers.git"
+    "url": "https://github.com/BedeGaming/marionette.renderers.git"
   },
   "keywords": [
     "marionette",
