@@ -11,13 +11,13 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /\.js$/,
+      test: /\.(js|jsx)$/,
       exclude: [/node_modules/],
       use: [{
         loader: 'babel-loader',
         options: {
           presets: [
-            ['es2015', {modules: false}]
+            ['es2015', 'react']
           ]
         }
       }]
@@ -45,17 +45,17 @@ module.exports = {
     }, {
       test: /\.svg$/,
       use: "url-loader?limit=10000&mimetype=image/svg+xml"
-    },{
+    },
+    {
         test: /\.jsx$/,
-        use: [{
-          loader: 'babel-loader', 
-          options: {
-            plugins: [["inferno", {
-              "imports": true,
-              "pragma": ""
-            }]]
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['react', 'stage-0']
+            }
           }
-        }]
+        ]
     }]
   },
   plugins: [
